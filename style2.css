@@ -306,7 +306,7 @@ label[for="nav-toggle"] {
     width: var(--navbar-width);
     height: 54px;
     background: var(--navbar-dark-secondary);
-    border-radius: 16px;
+    /* Remova a propriedade border-radius para deixar os cantos quadrados */
     display: flex;
     flex-direction: column;
     z-index: 2;
