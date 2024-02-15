@@ -1,16 +1,17 @@
 :root {
-    --background: #486623;
+    --background: #f0f7f4; /* Cor de fundo em verde claro */
     --navbar-width: 256px;
     --navbar-width-min: 80px;
-    --navbar-dark-primary: #18283b;
-    --navbar-dark-secondary: #2c3e50;
-    --navbar-light-primary: #f5f6fa;
-    --navbar-light-secondary: #8392a5;
+    --navbar-dark-primary: #2a9d8f; /* Cor primária escura em verde */
+    --navbar-dark-secondary: #1e716d; /* Cor secundária escura em verde */
+    --navbar-light-primary: #e9ecef; /* Cor primária clara em verde */
+    --navbar-light-secondary: #8392a5; /* Cor secundária clara em verde */
 }
 
 html, body {
     margin: 0;
     background: var(--background);
+    height: 100%;
 }
 
 #nav-toggle:checked ~ #nav-header {
@@ -126,6 +127,7 @@ html, body {
 
 #nav-title {
     font-size: 1.5rem;
+    color: rgb(0, 0, 0); /* Ajuste a cor do texto */
     transition: opacity 1s;
 }
 
@@ -189,17 +191,7 @@ label[for="nav-toggle"] {
     background-color: #D62929;
 }
 
-#nav-content-highlight {
-    position: absolute;
-    left: 16px;
-    top: -70px;
-    width: calc(100% - 16px);
-    height: 54px;
-    background: var(--background);
-    background-attachment: fixed;
-    border-radius: 16px 0 0 16px;
-    transition: top .2s;
-}
+
 
 #nav-content-highlight:before,
 #nav-content-highlight:after {
@@ -224,23 +216,25 @@ label[for="nav-toggle"] {
     height: 70px;
     display: flex;
     align-items: center;
-    color: var(--navbar-light-secondary);
+    color: black;
     direction: ltr;
     cursor: pointer;
     z-index: 1;
-    transition: color .2s;
+    /* Remova a transição de cor */
 }
+
+
 
 .nav-button span {
     transition: opacity 1s;
-    color: white; /* Ajuste a cor do texto */
-    margin-left: 10px;
+    color: rgb(0, 0, 0); /* Ajuste a cor do texto */
+    margin-left: 20px;
 }
 
 /* Ajuste a cor do texto do título */
 #nav-title {
     font-size: 1.5rem;
-    color: white; /* Ajuste a cor do texto */
+    color: rgb(0, 0, 0); /* Ajuste a cor do texto */
     transition: opacity 1s;
 }
 
@@ -292,13 +286,17 @@ label[for="nav-toggle"] {
 #nav-bar .fas,
 #nav-bar .bi {
     font-size: 1.5rem; /* Ajuste o tamanho dos ícones */
-    color: var(--navbar-light-secondary); /* Ajuste a cor dos ícones */
+    color: black; /* Ajuste a cor dos ícones */
 }
 
 /* Ajuste a cor dos ícones do menu ao passar o mouse sobre eles */
-.nav-button:hover .fas,
-.nav-button:hover .bi {
-    color: var(--navbar-dark-primary); /* Ajuste a cor dos ícones ao passar o mouse */
+.nav-button:hover {
+    color: #000000; /* Altere a cor do texto para preto quando o mouse estiver sobre o botão */
+}
+
+.nav-button:hover .bi, 
+.nav-button:hover .fas {
+    color: #000000; /* Altere a cor do ícone para preto quando o mouse estiver sobre o botão */
 }
 
 #nav-footer {
